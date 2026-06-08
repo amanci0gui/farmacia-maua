@@ -1,39 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmácia Mauá</title>
-    <script src="./components/header/header.js" defer></script>
-    <script src="./components/footer/footer.js" defer></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Farmácia Mauá</title>
+        <script src="./components/header/header.js" defer></script>
+        <script src="./components/footer/footer.js" defer></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            main {
+                flex: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <app-header></app-header>
+        <main id="app-main"></main>
+        <app-footer></app-footer>
         
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        main {
-            flex: 1;
-        }
-    </style>
-</head>
-<body>
-    <app-header></app-header>
-    <main></main>
-    <app-footer></app-footer>
-</body>
+        <script src="./scripts/data.js" defer></script>
+        <script src="./components/router/router.js" defer></script>
+        <script src="./components/product-list/product-list.js" defer></script>
+        <script src="./components/product-form/product-form.js" defer></script>
+        <script src="./components/product-detail/product-detail.js" defer></script>
+        <script src="./components/supplier-form/supplier-form.js" defer></script>
+        <script src="./components/cart-view/cart-view.js" defer></script>
+    </body>
 </html>

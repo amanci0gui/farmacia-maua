@@ -6,13 +6,27 @@ class AppHeader extends HTMLElement {
 
     connectedCallback() {
         this.render();
+        this.attachEventListeners();
+    }
+
+    attachEventListeners() {
+        const logo = this.shadowRoot.querySelector('.logo');
+        const cartBtn = this.shadowRoot.querySelector('.cart-btn');
+
+        logo?.addEventListener('click', () => {
+            window.location.hash = '/';
+        });
+
+        cartBtn?.addEventListener('click', () => {
+            window.location.hash = '/carrinho';
+        });
     }
 
     render() {
         this.shadowRoot.innerHTML = /*html*/`
             <link rel="stylesheet" href="./components/header/header.css">
             <header class="app-header">
-                <div class="logo">
+                <div class="logo" style="cursor: pointer;">
                     <h1>Farmácia Mauá</h1>
                 </div>
 
@@ -20,7 +34,7 @@ class AppHeader extends HTMLElement {
                     <input 
                         type="text" 
                         class="search-input" 
-                        placeholder="Buscar fornecedores..."
+                        placeholder="Buscar produtos..."
                         aria-label="Barra de busca"
                     >
                     <button class="search-btn" aria-label="Buscar">
@@ -30,9 +44,9 @@ class AppHeader extends HTMLElement {
 
                 <nav class="navigation">
                     <ul class="nav-list">
-                        <li><a href="/" class="nav-link">Home</a></li>
-                        <li><a href="#categorias" class="nav-link">Categorias</a></li>
-                        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="#/" class="nav-link">Produtos</a></li>
+                        <li><a href="#/produtos/cadastro" class="nav-link">Cadastro Produtos</a></li>
+                        <li><a href="#/fornecedores/cadastro" class="nav-link">Fornecedores</a></li>
                     </ul>
                 </nav>
 
@@ -46,6 +60,7 @@ class AppHeader extends HTMLElement {
                 </div>
             </header>
         `;
+        this.attachEventListeners();
     }
 }
 
