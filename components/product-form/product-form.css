@@ -8,11 +8,12 @@
 }
 
 .product-form-container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    grid-template-columns: minmax(350px, auto) 1fr;
     gap: 2rem;
 }
 
