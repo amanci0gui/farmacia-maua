@@ -18,6 +18,7 @@
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
 }
 
 .empty-cart {
@@ -139,6 +140,7 @@ tbody tr:hover {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
 }
 
 .summary-row {

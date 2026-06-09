@@ -44,6 +44,7 @@ class ProductForm extends HTMLElement {
         const stock = parseInt(form.querySelector('input[name="stock"]').value);
         const supplier = form.querySelector('input[name="supplier"]').value;
         const description = form.querySelector('textarea[name="description"]').value;
+        const image = form.querySelector('input[name="image"]').value;
 
         if (this.editingId) {
             const product = appState.products.find(p => p.id === this.editingId);
@@ -54,11 +55,12 @@ class ProductForm extends HTMLElement {
                 product.stock = stock;
                 product.supplier = supplier;
                 product.description = description;
+                product.image = image;
             }
             this.editingId = null;
         } else {
             const newId = Math.max(...appState.products.map(p => p.id), 0) + 1;
-            appState.products.push({ id: newId, name, category, price, stock, supplier, description });
+            appState.products.push({ id: newId, name, category, price, stock, supplier, description, image });
         }
 
         form.reset();
@@ -77,6 +79,7 @@ class ProductForm extends HTMLElement {
             form.querySelector('input[name="stock"]').value = product.stock;
             form.querySelector('input[name="supplier"]').value = product.supplier;
             form.querySelector('textarea[name="description"]').value = product.description;
+            form.querySelector('input[name="image"]').value = product.image || '';
             const title = this.shadowRoot.querySelector('.form-title');
             title.textContent = 'Editar Produto';
         }
@@ -115,6 +118,10 @@ class ProductForm extends HTMLElement {
                             <label for="description">Descrição</label>
                             <textarea id="description" name="description" rows="3"></textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="image">URL da Imagem</label>
+                            <input type="text" id="image" name="image" placeholder="Ex: ../assets/imagem.jpg">
+                        </div>
                         <div class="form-actions">
                             <button type="submit" class="btn-save">Salvar</button>
                             <button type="button" class="btn-clear">Limpar</button>
@@ -145,8 +152,10 @@ class ProductForm extends HTMLElement {
                                         <td>R$ ${p.price.toFixed(2)}</td>
                                         <td>${p.stock}</td>
                                         <td>
-                                            <button class="btn-edit" data-id="${p.id}">Editar</button>
-                                            <button class="btn-delete" data-id="${p.id}">Deletar</button>
+                                            <div class="btn-group">
+                                                <button class="btn-edit" data-id="${p.id}">Editar</button>
+                                                <button class="btn-delete" data-id="${p.id}">Deletar</button>
+                                            </div>
                                         </td>
                                     </tr>
                                 `).join('')}

@@ -30,6 +30,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-group {
@@ -134,6 +135,12 @@ td {
     color: var(--text-dark);
 }
 
+.btn-group {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
 tbody tr:hover {
     background-color: rgba(26, 125, 154, 0.05);
 }
@@ -141,7 +148,7 @@ tbody tr:hover {
 .btn-edit,
 .btn-delete {
     padding: 0.4rem 0.8rem;
-    margin-right: 0.5rem;
+    margin-right: 0.5remre;
     border: none;
     border-radius: 4px;
     font-size: 0.85rem;

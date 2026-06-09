@@ -20,7 +20,9 @@ class ProductList extends HTMLElement {
                 <div class="products-grid">
                     ${appState.products.map(product => `
                         <div class="product-card">
-                            <div class="product-image"></div>
+                            <div class="product-image">
+                                ${product.image ? `<img src="${product.image}" alt="${product.name}">` : ''}
+                            </div>
                             <div class="product-info">
                                 <span class="product-category">${product.category}</span>
                                 <h3>${product.name}</h3>

@@ -46,7 +46,9 @@ class ProductDetail extends HTMLElement {
 
                 <div class="product-content">
                     <div class="product-image-section">
-                        <div class="product-image"></div>
+                        <div class="product-image">
+                            ${product.image ? `<img src="${product.image}" alt="${product.name}">` : ''}
+                        </div>
                     </div>
 
                     <div class="product-details-section">

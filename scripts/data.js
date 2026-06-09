@@ -1,10 +1,10 @@
 const appState = {
     products: [
-        { id: 1, name: 'Dipirona 500mg', category: 'Analgésico', price: 5.99, stock: 100, supplier: 'Fornecedor A', description: 'Medicamento analgésico e antipirético.' },
-        { id: 2, name: 'Ibuprofeno 200mg', category: 'Anti-inflamatório', price: 8.50, stock: 75, supplier: 'Fornecedor B', description: 'Anti-inflamatório não esteroidal.' },
-        { id: 3, name: 'Vitamina C', category: 'Vitamina', price: 12.90, stock: 150, supplier: 'Fornecedor A', description: 'Suplemento de vitamina C para imunidade.' },
-        { id: 4, name: 'Protetor Solar 30', category: 'Cuidados', price: 25.00, stock: 50, supplier: 'Fornecedor C', description: 'Protetor solar com FPS 30.' },
-        { id: 5, name: 'Antiacido', category: 'Digestão', price: 6.50, stock: 120, supplier: 'Fornecedor B', description: 'Alivia azia e indigestão.' }
+        { id: 1, name: 'Dipirona 500mg', category: 'Analgésico', price: 5.99, stock: 100, supplier: 'Fornecedor A', description: 'Medicamento analgésico e antipirético.', image: '../assets/dipirona.jpeg' },
+        { id: 2, name: 'Ibuprofeno 200mg', category: 'Anti-inflamatório', price: 8.50, stock: 75, supplier: 'Fornecedor B', description: 'Anti-inflamatório não esteroidal.', image: '../assets/ibuprofeno.jpeg' },
+        { id: 3, name: 'Vitamina C', category: 'Vitamina', price: 12.90, stock: 150, supplier: 'Fornecedor A', description: 'Suplemento de vitamina C para imunidade.', image: '../assets/vitamina-c.jpeg' },
+        { id: 4, name: 'Protetor Solar 30', category: 'Cuidados', price: 25.00, stock: 50, supplier: 'Fornecedor C', description: 'Protetor solar com FPS 30.', image: '../assets/protetor-solar.jpg' },
+        { id: 5, name: 'Antiacido', category: 'Digestão', price: 6.50, stock: 120, supplier: 'Fornecedor B', description: 'Alivia azia e indigestão.', image: '../assets/antiacido.jpg' }
     ],
     suppliers: [
         { id: 1, name: 'Fornecedor A', phone: '(11) 1234-5678', email: 'contato@fornecedor-a.com', city: 'São Paulo', products: [1, 3] },

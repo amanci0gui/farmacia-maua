@@ -30,6 +30,7 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-bio p {
@@ -46,6 +47,7 @@
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-links ul {

@@ -45,8 +45,8 @@ class AppHeader extends HTMLElement {
                 <nav class="navigation">
                     <ul class="nav-list">
                         <li><a href="#/" class="nav-link">Produtos</a></li>
-                        <li><a href="#/produtos/cadastro" class="nav-link">Cadastro Produtos</a></li>
-                        <li><a href="#/fornecedores/cadastro" class="nav-link">Fornecedores</a></li>
+                        <li><a href="#/produtos/cadastro" class="nav-link">Cadastro de Produtos</a></li>
+                        <li><a href="#/fornecedores/cadastro" class="nav-link">Cadastro de Fornecedores</a></li>
                     </ul>
                 </nav>
 

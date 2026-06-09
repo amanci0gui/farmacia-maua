@@ -56,8 +56,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
-    color: #ccc;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .product-details-section {
@@ -82,6 +87,7 @@
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
 }
 
 .price-section {
@@ -127,6 +133,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
 }
 
 .description-section p {

@@ -129,8 +129,10 @@ class SupplierForm extends HTMLElement {
                                         <td>${s.email}</td>
                                         <td>${s.city}</td>
                                         <td>
-                                            <button class="btn-edit" data-id="${s.id}">Editar</button>
-                                            <button class="btn-delete" data-id="${s.id}">Deletar</button>
+                                            <div class="btn-group">
+                                                <button class="btn-edit" data-id="${s.id}">Editar</button>
+                                                <button class="btn-delete" data-id="${s.id}">Deletar</button>
+                                            </div>
                                         </td>
                                     </tr>
                                 `).join('')}
